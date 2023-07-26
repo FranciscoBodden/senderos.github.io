@@ -19,14 +19,16 @@
     background-image: url("sendero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-clip: border-box;
-    object-fit: contain;
+    background-position: center;
+    object-fit: fill;
    }
 .sendero{
   width: 140px;
   height: 135px;
   left: 15px;
   top: 1px;
+  object-fit: fill;
+  background-position: center;
 }
 #calendar {
   max-width: 1100px;
