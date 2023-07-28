@@ -35,6 +35,33 @@
   margin: 40px auto;
 }
 
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%
+}
+
+.text-bg-youtube {
+  color: #000!important;
+  background: red
+}
+
+.text-bg-youtube:hover {
+  background: #d90000
+}
+
+.fa-youtube:before {
+  content: "\f167"
+}
+
+.fa-brands {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400
+}
+
 
 .popper,
 .tooltip {
