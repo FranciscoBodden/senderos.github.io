@@ -291,4 +291,12 @@ border: 5px;
 }
  
 
+.carddefition {
+  width: 390px;
+  height: 279px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+}
  
