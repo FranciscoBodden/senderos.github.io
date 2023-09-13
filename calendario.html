@@ -4,6 +4,9 @@
     <meta charset='utf-8' />
     <link rel="stylesheet" href="stylesendero.css">
     <title>Calendario</title>   
+        <!-- daysi ui-->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.4/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
  <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
@@ -72,44 +75,24 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium" >Forjando Senderos</a>
               <a  class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Calendario</a>
-              <ul class="ml-auto flex"> <!-- Menu Forsen Familia--> 
-                <li class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium relative group">
-                    <a href="">Forsen Familia</a> 
-                    <ul class="absolute bg-gray-800 opacity-80 top-10 left-0 hidden group-hover:block w-full">
-                        <li class="my-1 hover:bg-gray-700">
-                            <a href="https://www.google.com/?client=safari">FORSEN Joven</a>
-                        </li>
-                        <li class="my-1 hover:bg-gray-700">
-                            <a href="">FORSEN Kids</a>
-                        </li>
-                        <li class="my-1 hover:bg-gray-700">
-                          <a href="">FORSEN Mujeres</a>
-                      </li>
-                      <li class="my-1 hover:bg-gray-700">
-                        <a href="">FORSEN Hombres</a>
-                    </li>                      
-                    </ul>
-                </li>
-              </ul> <!-- Fin Menu Forsen Familia-->
-              <ul class="ml-auto flex"> <!-- Fin Menu Forsen Servicios-->
-                <li class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium relative group " aria-current="page">
-                    <a href="">Forsen Servicios</a> 
-                    <ul class="absolute bg-gray-800  top-10 left-0 hidden group-hover:block w-full">
-                        <li class="my-1 hover:bg-gray-700">
-                            <a href="musica.html">Musica</a>
-                        </li>
-                        <li class="my-1 hover:bg-gray-700">
-                            <a href="">Danza</a>
-                        </li>
-                        <li class="my-1 hover:bg-gray-700">
-                          <a href="">Teatro</a>
-                      </li>
-                      <li class="my-1 hover:bg-gray-700">
-                        <a href="">Obra de Gracia</a>
-                    </li>                      
-                    </ul>
-                </li>
-              </ul> <!-- Fin Menu Forsen Servicios-->
+              <div class="dropdown z-50">  <!-- -->
+                <label tabindex="0" class="btn m-1 text-gray-300 hover:bg-gray-700 px-3 py-2  text-sm font-medium ">Forsen Familia</label>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a class="text-gray-300">FORSEN Joven</a></li>
+                  <li><a class="text-gray-300">FORSEN Kids</a></li>
+                  <li><a class="text-gray-300">FORSEN Mujeres</a></li>
+                  <li><a class="text-gray-300">FORSEN Hombres</a></li>                    
+                </ul>
+              </div>
+              <div class="dropdown z-50">  <!-- -->
+                <label tabindex="0" class="btn m-1 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Forsen Servicios</label>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a href="musica.html" class="text-gray-300">Musica</a></li>
+                  <li><a class="text-gray-300">Danza</a></li>
+                  <li><a class="text-gray-300">Teatro</a></li>
+                  <li><a class="text-gray-300">Obra de Gracia</a></li>                    
+                </ul>
+              </div>
               <a href="donaciones.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Donaciones</a>
             </div>
           </div>
@@ -122,11 +105,36 @@
     <div class="sm:hidden hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2 ">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Forjando Senderos</a>
-        <a  class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Calendario</a>
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Forsen Familia</a>
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Forsen Servicios</a>
+        <a href="index.html" class="text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page" >Forjando Senderos</a>
+        <a href="calendario.html" class="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendario</a>
+        <ul class="menu lg:menu-horizontal  rounded-box lg:mb-64">
+          <li>
+            <details close>
+              <summary class="text-gray-300 hover:text-white text-base font-medium">Forsen Familia</summary>
+              <ul>
+                <li><a class="text-gray-300 text-base font-medium">FORSEN Joven</a></li>
+                <li><a class="text-gray-300 text-base font-medium">FORSEN Kids</a></li>
+                <li><a class="text-gray-300 text-base font-medium">FORSEN Mujeres</a></li>
+                <li><a class="text-gray-300 text-base font-medium">FORSEN Hombres</a></li>  
+              </ul>
+            </details>
+          </li>
+        </ul>
+        <ul class="menu lg:menu-horizontal  rounded-box lg:mb-64">
+          <li>
+            <details close>
+              <summary class="text-gray-300 hover:text-white text-base font-medium">Forsen Servicios</summary>
+              <ul>
+                <li><a href="musica.html" class="text-gray-300 text-base font-medium">Musica</a></li>
+                <li><a class="text-gray-300 text-base font-medium">Danza</a></li>
+                <li><a class="text-gray-300 text-base font-medium">Teatro</a></li>
+                <li><a class="text-gray-300 text-base font-medium">Obra de Gracia</a></li>  
+              </ul>
+            </details>
+          </li>
+        </ul>
         <a href="donaciones.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Donaciones</a>
+
       </div>
     </div>
   </nav>

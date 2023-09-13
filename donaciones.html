@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <title>Donaciones</title>
-    <link rel="stylesheet" href="stylesendero.css">
-      
- <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
-
-    <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
-    <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
-    <!-- FullCalander CDN -->
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.7/locale/es.js"></script>
-    <!-- tailwind CDN -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset='utf-8' />
+  <title>Donaciones</title>
+  <link rel="stylesheet" href="stylesendero.css">
+    <!-- daysi ui-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Config calender -->
-    <script>
-        var myModal = new bootstrap.Modal(document.getElementById('myModal'), options);
-    </script>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 
-    <link rel="shortcut icon" href="icono.ico" />
-  </head>
-  <body>
-    <header id='headerbanner'>
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between pt-16">
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="py-1"><img class="sendero" src="logo_texto.png" alt="logo Forjando Sendero"></div>
-            </div>
+
+  <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+  <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+  <!-- FullCalander CDN -->
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.7/locale/es.js"></script>
+  <!-- tailwind CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Config calender -->
+  <script>
+    var myModal = new bootstrap.Modal(document.getElementById('myModal'), options);
+  </script>
+
+  <link rel="shortcut icon" href="icono.ico" />
+</head>
+
+<body>
+  <header id='headerbanner'>
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between pt-16">
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="py-1"><img class="sendero" src="logo_texto.png" alt="logo Forjando Sendero"></div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-<!-- menu -->
-<nav class="bg-gray-800">
+  <!-- menu -->
+  <nav class="bg-gray-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
-          <button id="boton" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <button id="boton" type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <!--
               Icon when menu is closed.
   
               Menu open: "hidden", Menu closed: "block"
             -->
-            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
             <!--
@@ -57,141 +67,173 @@
   
               Menu open: "block", Menu closed: "hidden"
             -->
-            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex flex-shrink-0 items-center">
-                <!-- <img class="block h-9 w-auto lg:hidden" src="logo_transparente.png" alt="logo Forjando Sendero"> -->
-                <img class="hidden h-9 w-auto lg:block" src="logo_transparente.png" alt="logo Forjando Sendero">
-            </div>
+          <div class="flex flex-shrink-0 items-center">
+            <!-- <img class="block h-9 w-auto lg:hidden" src="logo_transparente.png" alt="logo Forjando Sendero"> -->
+            <img class="hidden h-9 w-auto lg:block" src="logo_transparente.png" alt="logo Forjando Sendero">
+          </div>
 
           <div class="hidden sm:ml-6 sm:block ">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium" >Forjando Senderos</a>
-              <a  class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendario</a>
-              <ul class="ml-auto flex"> <!-- Menu Forsen Familia--> 
-                <li class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium relative group">
-                    <a href="">Forsen Familia</a> 
-                    <ul class="absolute bg-gray-800 opacity-80 top-10 left-0 hidden group-hover:block w-full">
-                        <li class="my-1 hover:bg-gray-700">
-                            <a href="https://www.google.com/?client=safari">FORSEN Joven</a>
-                        </li>
-                        <li class="my-1 hover:bg-gray-700">
-                            <a href="">FORSEN Kids</a>
-                        </li>
-                        <li class="my-1 hover:bg-gray-700">
-                          <a href="">FORSEN Mujeres</a>
-                      </li>
-                      <li class="my-1 hover:bg-gray-700">
-                        <a href="">FORSEN Hombres</a>
-                    </li>                      
-                    </ul>
-                </li>
-              </ul> <!-- Fin Menu Forsen Familia-->
-              <ul class="ml-auto flex"> <!-- Fin Menu Forsen Servicios-->
-                <li class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium relative group">
-                    <a href="">Forsen Servicios</a> 
-                    <ul class="absolute bg-gray-800  top-10 left-0 hidden group-hover:block w-full">
-                        <li class="my-1 hover:bg-gray-700">
-                            <a href="musica.html">Musica</a>
-                        </li>
-                        <li class="my-1 hover:bg-gray-700">
-                            <a href="">Danza</a>
-                        </li>
-                        <li class="my-1 hover:bg-gray-700">
-                          <a href="">Teatro</a>
-                      </li>
-                      <li class="my-1 hover:bg-gray-700">
-                        <a href="">Obra de Gracia</a>
-                    </li>                      
-                    </ul>
-                </li>
-              </ul> <!-- Fin Menu Forsen Servicios-->
-              <a class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Donaciones</a>
+              <a href="index.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Forjando
+                Senderos</a>
+                <a href="calendario.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendario</a>
+              <div class="dropdown z-50">  <!-- -->
+                <label tabindex="0" class="btn m-1 text-gray-300 hover:bg-gray-700 px-3 py-2  text-sm font-medium ">Forsen Familia</label>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a class="text-gray-300">FORSEN Joven</a></li>
+                  <li><a class="text-gray-300">FORSEN Kids</a></li>
+                  <li><a class="text-gray-300">FORSEN Mujeres</a></li>
+                  <li><a class="text-gray-300">FORSEN Hombres</a></li>                    
+                </ul>
+              </div>
+              <div class="dropdown z-50">  <!-- -->
+                <label tabindex="0" class="btn m-1 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Forsen Servicios</label>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a href="musica.html" class="text-gray-300">Musica</a></li>
+                  <li><a class="text-gray-300">Danza</a></li>
+                  <li><a class="text-gray-300">Teatro</a></li>
+                  <li><a class="text-gray-300">Obra de Gracia</a></li>                    
+                </ul>
+              </div>
+              <a class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page">Donaciones</a>
             </div>
           </div>
         </div>
-        </div>
       </div>
     </div>
-  
+    </div>
+
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="sm:hidden hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2 ">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Forjando Senderos</a>
+        <a href="index.html" class="text-white block rounded-md px-3 py-2 text-base font-medium">Forjando Senderos</a>
         <a href="calendario.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendario</a>
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Forsen Familia</a>
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Forsen Servicios</a>
-        <a class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Donaciones</a>
+        <ul class="menu lg:menu-horizontal  rounded-box lg:mb-64">
+          <li>
+            <details close>
+              <summary class="text-gray-300 hover:text-white text-base font-medium">Forsen Familia</summary>
+              <ul>
+                <li><a class="text-gray-300 text-base font-medium">FORSEN Joven</a></li>
+                <li><a class="text-gray-300 text-base font-medium">FORSEN Kids</a></li>
+                <li><a class="text-gray-300 text-base font-medium">FORSEN Mujeres</a></li>
+                <li><a class="text-gray-300 text-base font-medium">FORSEN Hombres</a></li>  
+              </ul>
+            </details>
+          </li>
+        </ul>
+        <ul class="menu lg:menu-horizontal  rounded-box lg:mb-64">
+          <li>
+            <details close>
+              <summary class="text-gray-300 hover:text-white text-base font-medium">Forsen Servicios</summary>
+              <ul>
+                <li><a href="musica.html" class="text-gray-300 text-base font-medium">Musica</a></li>
+                <li><a class="text-gray-300 text-base font-medium">Danza</a></li>
+                <li><a class="text-gray-300 text-base font-medium">Teatro</a></li>
+                <li><a class="text-gray-300 text-base font-medium">Obra de Gracia</a></li>  
+              </ul>
+            </details>
+          </li>
+        </ul>
+        <a href="donaciones.html" class="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Donaciones</a>
+
       </div>
     </div>
   </nav>
 
-<!-- menu fin -->
-<div class="flex flex-nowrap">
-<div class="text-justify flex-0 justify-center items-center">
-    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 ">
+  <!-- menu fin -->
+  <div class="flex justify-around my-5 gap-6 flex-wrap">
+    <div class="text-left flex-0 justify-center items-center">
+      <div class="max-w-sm p-6 bg-white min-h-[450px] border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 ">
 
         <a href="#">
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">Ayúdanos a expandir el Reino de Dios Forjando Iglesias Saludable.</h5>
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">Ayúdanos a expandir el Reino de Dios
+            Forjando Iglesias Saludable.</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-500 text-gray-400  ">Ustedes serán enriquecidos en todo sentido para que en toda ocasión puedan ser generosos, y para que por medio de nosotros la generosidad de ustedes resulte en acciones de gracias a Dios.
-            2 Corintios 9:11<span>            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 270 270;" xml:space="preserve" width="20" height="20"><path style="fill:#956958;" d="M4.492 0.326 2.8 1.944a0.441 0.441 0 0 0 -0.136 0.319v17.069A0.668 0.668 0 0 0 3.332 20h11.321a1.24 1.24 0 0 0 0.877 -0.364l1.807 -1.807V0.117A0.117 0.117 0 0 0 17.22 0H5.306a1.177 1.177 0 0 0 -0.813 0.326z"/><path style="fill:#7C5849;" d="M4.492 0.326 2.8 1.944a0.441 0.441 0 0 0 -0.136 0.319v17.069A0.668 0.668 0 0 0 3.332 20H10V0H5.306a1.177 1.177 0 0 0 -0.813 0.326z"/><g><path style="fill:#FCF0D9;" d="M16.87 0.296H5.212L3.868 1.58h11.866c0.065 0 0.117 0.052 0.117 0.117v17.617l1.136 -1.136V0.414a0.117 0.117 0 0 0 -0.117 -0.117z"/></g><path style="fill:#D9B07F;" points="158.667,92.833 140.5,92.833 140.5,74.333 129.5,74.333 129.5,92.833 111.333,92.833 
-                111.333,103.833 129.5,103.833 129.5,149 140.5,149 140.5,103.833 158.667,103.833 " d="M11.753 6.876h-1.346v-1.37h-0.815v1.37h-1.346v0.815h1.346v3.346h0.815v-3.346h1.346Z"/><path style="fill:#C39F73;" points="135,74.333 129.5,74.333 129.5,92.833 111.333,92.833 111.333,103.833 129.5,103.833 
-                129.5,149 135,149 " d="M10 5.506h-0.408v1.37h-1.346v0.815h1.346v3.346H10Z"/><path style="fill:#F8E0B3;" points="135,4 70.357,4 52.218,21.333 135,21.333 " d="M10 0.296H5.212L3.868 1.58H10Z"/></svg></span></p>
+        <p class="mb-3 font-normal text-gray-500 text-gray-400  ">Ustedes serán enriquecidos en todo sentido para que en
+          toda ocasión puedan ser generosos, y para que por medio de nosotros la generosidad de ustedes resulte en
+          acciones de gracias a Dios.
+          2 Corintios 9:11<span> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20"
+              style="enable-background:new 0 0 270 270;" xml:space="preserve" width="20" height="20">
+              <path style="fill:#956958;"
+                d="M4.492 0.326 2.8 1.944a0.441 0.441 0 0 0 -0.136 0.319v17.069A0.668 0.668 0 0 0 3.332 20h11.321a1.24 1.24 0 0 0 0.877 -0.364l1.807 -1.807V0.117A0.117 0.117 0 0 0 17.22 0H5.306a1.177 1.177 0 0 0 -0.813 0.326z" />
+              <path style="fill:#7C5849;"
+                d="M4.492 0.326 2.8 1.944a0.441 0.441 0 0 0 -0.136 0.319v17.069A0.668 0.668 0 0 0 3.332 20H10V0H5.306a1.177 1.177 0 0 0 -0.813 0.326z" />
+              <g>
+                <path style="fill:#FCF0D9;"
+                  d="M16.87 0.296H5.212L3.868 1.58h11.866c0.065 0 0.117 0.052 0.117 0.117v17.617l1.136 -1.136V0.414a0.117 0.117 0 0 0 -0.117 -0.117z" />
+              </g>
+              <path style="fill:#D9B07F;" points="158.667,92.833 140.5,92.833 140.5,74.333 129.5,74.333 129.5,92.833 111.333,92.833 
+                111.333,103.833 129.5,103.833 129.5,149 140.5,149 140.5,103.833 158.667,103.833 "
+                d="M11.753 6.876h-1.346v-1.37h-0.815v1.37h-1.346v0.815h1.346v3.346h0.815v-3.346h1.346Z" />
+              <path style="fill:#C39F73;" points="135,74.333 129.5,74.333 129.5,92.833 111.333,92.833 111.333,103.833 129.5,103.833 
+                129.5,149 135,149 " d="M10 5.506h-0.408v1.37h-1.346v0.815h1.346v3.346H10Z" />
+              <path style="fill:#F8E0B3;" points="135,4 70.357,4 52.218,21.333 135,21.333 "
+                d="M10 0.296H5.212L3.868 1.58H10Z" />
+            </svg></span></p>
 
+      </div>
     </div>
-</div>    
 
-<div class="text-justify flex justify-center items-center">
-    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 ">
+    <div class="text-left flex justify-center items-center">
+      <div class="max-w-sm p-6 bg-white min-h-[450px] border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 ">
 
         <a href="#">
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">Cada donación que reciba nuestra iglesia será para crear caminos para dar, sanar, pregonar y predicar.</h5>
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">Cada donación que reciba nuestra iglesia
+            será para crear caminos para dar, sanar, pregonar y predicar.</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-500 text-gray-400  ">Si se siente llamado a contribuir 
-            con la siembra de 1 dollar en adelante, podrás ser parte del equipo de forjadores del Reino.
-            Cualquier cantidad es bienvenida y apreciada. </p>
-            <p class="text-justify flex justify-center items-center"> Agradecemos de antemano su apoyo y oramos para que Dios continúe bendiciendo sus vidas.</p>    
-            <br>    
-            <p class="text-justify flex justify-center items-center">  Dona ahora</p>
+        <p class="mb-3 font-normal text-gray-500 text-gray-400  ">Si se siente llamado a contribuir
+          con la siembra de 1 dollar en adelante, podrás ser parte del equipo de forjadores del Reino.
+          Cualquier cantidad es bienvenida y apreciada. </p>
+        <p class="text-justify flex justify-center items-center"> Agradecemos de antemano su apoyo y oramos para que
+          Dios continúe bendiciendo sus vidas.</p>
+        <br>
+        <p class="text-justify flex justify-center items-center"> Dona ahora</p>
+      </div>
     </div>
-</div>  
-</div>
+  </div>
 
-<div class="flex justify-center items-center">
+  <div class="flex justify-center items-center">
     <div class="space-y-16">
-        <div class="w-96 h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">
-            <img class="relative object-cover w-full h-full rounded-xl" src="cardbanservas.png">
-            <div class="w-full px-8 absolute top-8">
-                <div class="flex justify-between">
-                    <div class="">
-                        <p class="font-light">
-                            Nombre:
-                        </h1>
-                        <p class="font-medium tracking-widest text-black">
-                            IGLESIA EN CRISTO JESUS FORJANDO SENDEROS
-                        </p>
-                    </div>
-                </div>
-                <div class="pt-1">
-                    <p class="font-light">
-                        Numero de Cuenta:
-                    </h1>
-                    <p class="font-medium tracking-more-wider text-black">
-                        9604046609
-                    </p>
-                </div>
+      <div
+        class="w-96 h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">
+        <img class="relative object-cover w-full h-full rounded-xl" src="cardbanservas.png">
+        <div class="w-full px-8 absolute top-8">
+          <div class="flex justify-between">
+            <div class="">
+              <p class="font-light">
+                Nombre:
+                </h1>
+              <p class="font-medium tracking-widest text-black">
+                IGLESIA EN CRISTO JESUS FORJANDO SENDEROS
+              </p>
             </div>
+          </div>
+          <div class="pt-1">
+            <p class="font-light">
+              Numero de Cuenta:
+              </h1>
+            <p class="font-medium tracking-more-wider text-black">
+              9604046609
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-    <footer></footer>
-    <script src="boton.js" type="text/javascript"></script>
-  </body>
+  </div>
+  <footer></footer>
+  <script src="boton.js" type="text/javascript"></script>
+</body>
+
 </html>
